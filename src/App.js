@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import { AragonApp, AppView } from '@aragon/ui'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 import BlockExplorer from './containers/BlockExplorer'
@@ -11,12 +12,13 @@ const client = new ApolloClient({
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <header className="App-header" />
-                <ApolloProvider client={client}>
-                    <BlockExplorer />
-                </ApolloProvider>
-            </div>
+            <AragonApp className="app" publicUrl="/aragon-ui-assets/">
+                <AppView title="Ten Latest Ethereum Blocks">
+                    <ApolloProvider client={client}>
+                        <BlockExplorer />
+                    </ApolloProvider>
+                </AppView>
+            </AragonApp>
         )
     }
 }

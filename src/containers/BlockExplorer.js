@@ -27,7 +27,6 @@ class BlockExplorer extends React.Component {
         const { currentBlockNumber, lastTenBlocks } = this.state
         return (
             <div>
-                {currentBlockNumber && <p>{`Current Block Number: ${currentBlockNumber}`}</p>}
                 <div>
                     <ol>
                         {map(lastTenBlocks, blockNumber => (
