@@ -5,8 +5,6 @@ import Block from './index.js'
 it('Block renders according to snapshot.', () => {
     const block = {
         number: 6551120,
-        hash: '0x482ef4f5d0931339f8b939d2a49d8ae8a226d4e2e2cd9c442550b89f8b8726ec',
-        transactionCount: 8,
         transactions: [
             {
                 hash: '0xd67348d36f906ba7b2be09baa868e0e93cf310f8d06146ec8e0936e96410e05d',
