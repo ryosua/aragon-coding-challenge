@@ -31,7 +31,7 @@ class BlockExplorer extends React.Component {
                 <div>
                     <ol>
                         {map(lastTenBlocks, blockNumber => (
-                            <BlockContainer blockNumber={blockNumber} />
+                            <BlockContainer key={blockNumber} blockNumber={blockNumber} />
                         ))}
                     </ol>
                 </div>
