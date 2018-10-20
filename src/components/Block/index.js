@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import map from 'lodash/map'
 import isEmpty from 'lodash/isEmpty'
 import { Table, TableHeader, TableRow, Text } from '@aragon/ui'
-import TransactionRow from './TransactionRow'
+import TransactionRow from '../TransactionRow'
 
 const Block = ({ blockNumber, transactions, emptyBlockText }) => (
     <React.Fragment>

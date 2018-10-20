@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block renders according to snapshot. 1`] = `
+Array [
+  <span
+    className="Text-yxw4o9-0 hzfDfW"
+    size="large"
+  >
+    Block Number: 
+    6551120
+  </span>,
+  " ",
+  <br />,
+  <table
+    className="Table__StyledTable-uvcan9-0 ksKxdz"
+  >
+    <thead>
+      <tr
+        className="TableRow__StyledTableRow-sc-3jn6yz-0 cFtmyC"
+      >
+        <th
+          className="TableHeader__StyledTableHeader-sc-1qxm8cp-0 hKOaZg"
+        >
+          <div
+            className="Text-yxw4o9-0-div kRDWpm"
+            color="#707070"
+          >
+            TxHash
+          </div>
+        </th>
+        <th
+          className="TableHeader__StyledTableHeader-sc-1qxm8cp-0 hKOaZg"
+        >
+          <div
+            className="Text-yxw4o9-0-div kRDWpm"
+            color="#707070"
+          >
+            From
+          </div>
+        </th>
+        <th
+          className="TableHeader__StyledTableHeader-sc-1qxm8cp-0 hKOaZg"
+        >
+          <div
+            className="Text-yxw4o9-0-div kRDWpm"
+            color="#707070"
+          >
+            To
+          </div>
+        </th>
+        <th
+          className="TableHeader__StyledTableHeader-sc-1qxm8cp-0 hKOaZg"
+        >
+          <div
+            className="Text-yxw4o9-0-div kRDWpm"
+            color="#707070"
+          >
+            Value
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="TableRow__StyledTableRow-sc-3jn6yz-0 cFtmyC"
+      >
+        <td
+          className="TableCell__StyledTableCell-sc-110j155-0 bqABXJ"
+        >
+          <div
+            className="TableCell__StyledTableCellContent-sc-110j155-1 klobR"
+          >
+            <span
+              className="Text-yxw4o9-0 bIIgvx"
+            >
+              0xd67348d36f906ba7b2be09baa868e0e93cf310f8d06146ec8e0936e96410e05d
+            </span>
+          </div>
+        </td>
+        <td
+          className="TableCell__StyledTableCell-sc-110j155-0 bqABXJ"
+        >
+          <div
+            className="TableCell__StyledTableCellContent-sc-110j155-1 klobR"
+          >
+            <span
+              className="Text-yxw4o9-0 bIIgvx"
+            >
+              0xBA826fEc90CEFdf6706858E5FbaFcb27A290Fbe0
+            </span>
+          </div>
+        </td>
+        <td
+          className="TableCell__StyledTableCell-sc-110j155-0 bqABXJ"
+        >
+          <div
+            className="TableCell__StyledTableCellContent-sc-110j155-1 klobR"
+          >
+            <span
+              className="Text-yxw4o9-0 bIIgvx"
+            >
+              0xD0a4b8946Cb52f0661273bfbC6fD0E0C75Fc6433
+            </span>
+          </div>
+        </td>
+        <td
+          className="TableCell__StyledTableCell-sc-110j155-0 bqABXJ"
+        >
+          <div
+            className="TableCell__StyledTableCellContent-sc-110j155-1 klobR"
+          >
+            <span
+              className="Text-yxw4o9-0 bIIgvx"
+            >
+              0
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="TableRow__StyledTableRow-sc-3jn6yz-0 cFtmyC"
+      >
+        <td
+          className="TableCell__StyledTableCell-sc-110j155-0 bqABXJ"
+        >
+          <div
+            className="TableCell__StyledTableCellContent-sc-110j155-1 klobR"
+          >
+            <span
+              className="Text-yxw4o9-0 bIIgvx"
+            >
+              0x24c810eaa67a6ec5e84c75ad6656a1e1af14b6d1dcf69990079dc78e336563f7
+            </span>
+          </div>
+        </td>
+        <td
+          className="TableCell__StyledTableCell-sc-110j155-0 bqABXJ"
+        >
+          <div
+            className="TableCell__StyledTableCellContent-sc-110j155-1 klobR"
+          >
+            <span
+              className="Text-yxw4o9-0 bIIgvx"
+            >
+              0x16C598eE4540b73898dEd6684e78774928cE2e88
+            </span>
+          </div>
+        </td>
+        <td
+          className="TableCell__StyledTableCell-sc-110j155-0 bqABXJ"
+        >
+          <div
+            className="TableCell__StyledTableCellContent-sc-110j155-1 klobR"
+          >
+            <span
+              className="Text-yxw4o9-0 bIIgvx"
+            >
+              0x7C39a481E17CCAfbe8e50Ec1388fDBB01Bbb3bf4
+            </span>
+          </div>
+        </td>
+        <td
+          className="TableCell__StyledTableCell-sc-110j155-0 bqABXJ"
+        >
+          <div
+            className="TableCell__StyledTableCellContent-sc-110j155-1 klobR"
+          >
+            <span
+              className="Text-yxw4o9-0 bIIgvx"
+            >
+              0
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+  <br />,
+]
+`;
