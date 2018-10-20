@@ -5,12 +5,21 @@ const BlockFragment = gql`
         hash
         transactions(filter: { withInput: true }) {
             hash
-            value
+            nonce
+            index
             from {
                 address
             }
             to {
                 address
+            }
+            value
+            gasPrice
+            gas
+            inputData
+            status
+            block {
+                hash
             }
         }
     }

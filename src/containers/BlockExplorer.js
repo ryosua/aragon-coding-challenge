@@ -25,17 +25,7 @@ class BlockExplorer extends React.Component {
 
     render() {
         const { lastTenBlocks } = this.state
-        return (
-            <div>
-                <div>
-                    <ol>
-                        {map(lastTenBlocks, blockNumber => (
-                            <BlockContainer key={blockNumber} blockNumber={blockNumber} />
-                        ))}
-                    </ol>
-                </div>
-            </div>
-        )
+        return map(lastTenBlocks, blockNumber => <BlockContainer key={blockNumber} blockNumber={blockNumber} />)
     }
 }
 
