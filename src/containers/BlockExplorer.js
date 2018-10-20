@@ -2,6 +2,7 @@ import React from 'react'
 import map from 'lodash/map'
 import getCurrentBlockNumber from '../api/getCurrentBlockNumber'
 import hexToInt from '../util/hexToInt'
+import BlockContainer from '../containers/BlockContainer'
 
 class BlockExplorer extends React.Component {
     state = {
@@ -30,7 +31,7 @@ class BlockExplorer extends React.Component {
                 <div>
                     <ol>
                         {map(lastTenBlocks, blockNumber => (
-                            <li>{blockNumber}</li>
+                            <BlockContainer blockNumber={blockNumber} />
                         ))}
                     </ol>
                 </div>
