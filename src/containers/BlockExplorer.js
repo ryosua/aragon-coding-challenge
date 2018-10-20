@@ -24,7 +24,7 @@ class BlockExplorer extends React.Component {
     }
 
     render() {
-        const { currentBlockNumber, lastTenBlocks } = this.state
+        const { lastTenBlocks } = this.state
         return (
             <div>
                 <div>
