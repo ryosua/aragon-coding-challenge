@@ -1,12 +1,30 @@
 import gql from 'graphql-tag'
-import BlockFragment from '../fragments/BlockFragment'
 
 const GetBlockByNumber = gql`
     query GetLast10Blocks($numbers: [BlockNumber]!) {
         blocks(numbers: $numbers) {
-            ...BlockFragment
+            hash
+            transactionCount
+            transactions(filter: { withInput: true }) {
+                hash
+                nonce
+                index
+                from {
+                    address
+                }
+                to {
+                    address
+                }
+                value
+                gasPrice
+                gas
+                inputData
+                status
+                block {
+                    hash
+                }
+            }
         }
     }
-    ${BlockFragment}
 `
 export default GetBlockByNumber
