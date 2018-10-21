@@ -1,41 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { TableRow, TableCell, Text } from '@aragon/ui'
-import { getConversionRate, convertWeiToUSD } from '../../api/getConversionRate'
+import { convertWeiToUSD } from '../../api/getConversionRate'
+import RateContext from '../../contexts/RateContext'
 
-class TransactionRow extends React.Component {
-    state = {
-        ethToUSDRate: undefined
-    }
-
-    componentDidMount() {
-        getConversionRate().then(ethToUSDRate => {
-            console.log(ethToUSDRate)
-            this.setState({ ethToUSDRate })
-        })
-    }
-
-    render() {
-        const { hash, from, to, value } = this.props
-        const { ethToUSDRate } = this.state
-        const valueInUSD = ethToUSDRate ? convertWeiToUSD(value, ethToUSDRate) : 'loading'
-        return (
-            <TableRow>
-                <TableCell>
-                    <Text>{hash}</Text>
-                </TableCell>
-                <TableCell>
-                    <Text>{from.address}</Text>
-                </TableCell>
-                <TableCell>
-                    <Text>{to.address}</Text>
-                </TableCell>
-                <TableCell>
-                    <Text>{valueInUSD}</Text>
-                </TableCell>
-            </TableRow>
-        )
-    }
+const TransactionRow = ({ hash, from, to, value }) => {
+    return (
+        <RateContext.Consumer>
+            {({ ethToUSDRate }) => {
+                const valueInUSD = ethToUSDRate ? convertWeiToUSD(value, ethToUSDRate) : 'loading'
+                return (
+                    <TableRow>
+                        <TableCell>
+                            <Text>{hash}</Text>
+                        </TableCell>
+                        <TableCell>
+                            <Text>{from.address}</Text>
+                        </TableCell>
+                        <TableCell>
+                            <Text>{to.address}</Text>
+                        </TableCell>
+                        <TableCell>
+                            <Text>{valueInUSD}</Text>
+                        </TableCell>
+                    </TableRow>
+                )
+            }}
+        </RateContext.Consumer>
+    )
 }
 
 TransactionRow.propTypes = {

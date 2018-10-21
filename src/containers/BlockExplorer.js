@@ -3,12 +3,17 @@ import map from 'lodash/map'
 import getCurrentBlockNumber from '../api/getCurrentBlockNumber'
 import hexToInt from '../util/hexToInt'
 import BlockContainer from '../containers/BlockContainer'
+import { getConversionRate } from '../api/getConversionRate'
+import RateContext from '../contexts/RateContext'
 
 class BlockExplorer extends React.Component {
     state = {
         currentBlockNumber: undefined,
-        lastTenBlocks: []
+        lastTenBlocks: [],
+        ethToUSDRate: undefined
     }
+
+    logError = error => console.log(error)
 
     componentDidMount() {
         getCurrentBlockNumber()
@@ -20,12 +25,24 @@ class BlockExplorer extends React.Component {
                 }
                 this.setState({ currentBlockNumber, lastTenBlocks })
             })
-            .catch(error => console.log)
+            .catch(this.logError)
+
+        getConversionRate()
+            .then(ethToUSDRate => {
+                this.setState({ ethToUSDRate })
+            })
+            .catch(this.logError)
     }
 
     render() {
-        const { lastTenBlocks } = this.state
-        return map(lastTenBlocks, blockNumber => <BlockContainer key={blockNumber} blockNumber={blockNumber} />)
+        const { lastTenBlocks, ethToUSDRate } = this.state
+        return (
+            <RateContext.Provider value={{ ethToUSDRate }}>
+                {map(lastTenBlocks, blockNumber => (
+                    <BlockContainer key={blockNumber} blockNumber={blockNumber} />
+                ))}
+            </RateContext.Provider>
+        )
     }
 }
 
