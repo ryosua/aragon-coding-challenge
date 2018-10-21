@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { TableRow, TableCell, Text } from '@aragon/ui'
-import { convertWeiToUSD } from '../../api/getConversionRate'
-import RateContext from '../../contexts/RateContext'
+import { convertWeiToUSD } from 'api/getConversionRate'
+import RateContext from 'contexts/RateContext'
 
 const TransactionRow = ({ hash, from, to, value }) => {
     return (

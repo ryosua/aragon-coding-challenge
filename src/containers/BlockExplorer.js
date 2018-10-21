@@ -1,10 +1,10 @@
 import React from 'react'
 import map from 'lodash/map'
-import getCurrentBlockNumber from '../api/getCurrentBlockNumber'
-import hexToInt from '../util/hexToInt'
-import BlockContainer from '../containers/BlockContainer'
-import { getConversionRate } from '../api/getConversionRate'
-import RateContext from '../contexts/RateContext'
+import getCurrentBlockNumber from 'api/getCurrentBlockNumber'
+import hexToInt from 'util/hexToInt'
+import BlockContainer from 'containers/BlockContainer'
+import { getConversionRate } from 'api/getConversionRate'
+import RateContext from 'contexts/RateContext'
 
 class BlockExplorer extends React.Component {
     state = {

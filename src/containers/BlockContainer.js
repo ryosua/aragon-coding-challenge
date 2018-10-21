@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import filter from 'lodash/filter'
 import { Query } from 'react-apollo'
 import { Text } from '@aragon/ui'
-import GetBlockByNumber from '../graphql/queries/GetBlockByNumber'
-import Block from '../components/Block'
+import GetBlockByNumber from 'graphql/queries/GetBlockByNumber'
+import Block from 'components/Block'
 
 const BlockContainer = ({ blockNumber }) => (
     <Query query={GetBlockByNumber} variables={{ number: blockNumber }}>

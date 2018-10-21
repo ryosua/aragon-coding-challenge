@@ -3,7 +3,7 @@ import './App.css'
 import { AragonApp, AppView } from '@aragon/ui'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
-import BlockExplorer from './containers/BlockExplorer'
+import BlockExplorer from 'containers/BlockExplorer'
 
 const client = new ApolloClient({
     uri: 'https://ethql-alpha.infura.io/graphql'
