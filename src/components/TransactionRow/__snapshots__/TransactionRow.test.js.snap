@@ -52,7 +52,7 @@ exports[`TransactionRow renders according to snapshot. 1`] = `
       <span
         className="Text-yxw4o9-0 bIIgvx"
       >
-        0
+        loading
       </span>
     </div>
   </td>
