@@ -6,7 +6,7 @@ import { Table, TableHeader, TableRow, Text } from '@aragon/ui'
 import TransactionRow from 'components/TransactionRow'
 
 const Block = ({ blockNumber, transactions, emptyBlockText }) => (
-    <React.Fragment>
+    <>
         <Text size={'large'}>Block Number: {blockNumber}</Text> <br />
         {isEmpty(transactions) ? (
             <Text>{emptyBlockText}</Text>
@@ -26,7 +26,7 @@ const Block = ({ blockNumber, transactions, emptyBlockText }) => (
             </Table>
         )}
         <br />
-    </React.Fragment>
+    </>
 )
 
 Block.propTypes = {
