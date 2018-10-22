@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Block renders according to snapshot. 1`] = `
+exports[`Block tests Block renders according to snapshot. 1`] = `
 Array [
   <span
     className="Text-yxw4o9-0 hzfDfW"

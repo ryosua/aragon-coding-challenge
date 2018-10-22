@@ -9,7 +9,7 @@ const Block = ({ blockNumber, transactions, emptyBlockText }) => (
     <>
         <Text size={'large'}>Block Number: {blockNumber}</Text> <br />
         {isEmpty(transactions) ? (
-            <Text>{emptyBlockText}</Text>
+            <Text className="empty-text">{emptyBlockText}</Text>
         ) : (
             <Table
                 header={
