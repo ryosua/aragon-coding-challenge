@@ -5,6 +5,9 @@ const text = {
         from: 'From',
         to: 'To',
         value: 'Value'
+    },
+    transactionRow: {
+        loading: 'loading'
     }
 }
 

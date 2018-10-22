@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { TableRow, TableCell, Text } from '@aragon/ui'
+import text from 'constants/text'
 import { convertWeiToUSD } from 'api/getConversionRate'
 import RateContext from 'contexts/RateContext'
+
+const { loading } = text.transactionRow
 
 const TransactionRow = ({ hash, from, to, value }) => {
     return (
         <RateContext.Consumer>
             {({ ethToUSDRate }) => {
-                const valueInUSD = ethToUSDRate ? convertWeiToUSD(value, ethToUSDRate) : 'loading'
+                const valueInUSD = ethToUSDRate ? convertWeiToUSD(value, ethToUSDRate) : loading
                 return (
                     <TableRow>
                         <TableCell>
