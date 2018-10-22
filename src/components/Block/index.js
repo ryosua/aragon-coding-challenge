@@ -6,7 +6,7 @@ import text from 'constants/text'
 import { Table, TableHeader, TableRow, Text } from '@aragon/ui'
 import TransactionRow from 'components/TransactionRow'
 
-const { blockNumber: blockNumberText, hash, from, to, value, emptyBlockText } = text.block
+const { blockNumber: blockNumberText, hash, from, to, value, emptyBlockText } = text.components.block
 
 const Block = ({ blockNumber, transactions }) => (
     <>

@@ -5,7 +5,7 @@ import text from 'constants/text'
 import { convertWeiToUSD } from 'api/getConversionRate'
 import RateContext from 'contexts/RateContext'
 
-const { loading } = text.transactionRow
+const { loading } = text.components.transactionRow
 
 const TransactionRow = ({ hash, from, to, value }) => {
     return (
