@@ -50,15 +50,7 @@ describe('Block tests', () => {
                 }
             ]
         }
-        const tree = renderer
-            .create(
-                <Block
-                    blockNumber={block.number}
-                    transactions={block.transactions}
-                    emptyBlockText="This block contains no transactions sending Ether."
-                />
-            )
-            .toJSON()
+        const tree = renderer.create(<Block blockNumber={block.number} transactions={block.transactions} />).toJSON()
         expect(tree).toMatchSnapshot()
     })
 
@@ -68,13 +60,7 @@ describe('Block tests', () => {
             transactions: []
         }
 
-        const wrapper = shallow(
-            <Block
-                blockNumber={block.number}
-                transactions={block.transactions}
-                emptyBlockText="This block contains no transactions sending Ether."
-            />
-        )
+        const wrapper = shallow(<Block blockNumber={block.number} transactions={block.transactions} />)
         expect(wrapper.exists('.empty-text')).toEqual(true)
     })
 })

@@ -17,13 +17,7 @@ const BlockContainer = ({ blockNumber }) => (
             }
             const { transactions } = data.block
             const transactionsWithNonZeroValue = filter(transactions, transaction => transaction.value !== 0)
-            return (
-                <Block
-                    blockNumber={blockNumber}
-                    transactions={transactionsWithNonZeroValue}
-                    emptyBlockText="This block contains no transactions sending Ether."
-                />
-            )
+            return <Block blockNumber={blockNumber} transactions={transactionsWithNonZeroValue} />
         }}
     </Query>
 )

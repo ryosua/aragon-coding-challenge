@@ -4,7 +4,8 @@ const text = {
         hash: 'TxHash',
         from: 'From',
         to: 'To',
-        value: 'Value'
+        value: 'Value',
+        emptyBlockText: 'This block contains no transactions sending Ether.'
     },
     transactionRow: {
         loading: 'loading'

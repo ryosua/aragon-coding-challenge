@@ -6,9 +6,9 @@ import text from 'constants/text'
 import { Table, TableHeader, TableRow, Text } from '@aragon/ui'
 import TransactionRow from 'components/TransactionRow'
 
-const { blockNumber: blockNumberText, hash, from, to, value } = text.block
+const { blockNumber: blockNumberText, hash, from, to, value, emptyBlockText } = text.block
 
-const Block = ({ blockNumber, transactions, emptyBlockText }) => (
+const Block = ({ blockNumber, transactions }) => (
     <>
         <Text size={'large'}>{`${blockNumberText} ${blockNumber}`}</Text> <br />
         {isEmpty(transactions) ? (
@@ -41,8 +41,7 @@ Block.propTypes = {
             to: PropTypes.object.isRequired,
             value: PropTypes.number.isRequired
         })
-    ).isRequired,
-    emptyBlockText: PropTypes.string.isRequired
+    ).isRequired
 }
 
 export default Block
