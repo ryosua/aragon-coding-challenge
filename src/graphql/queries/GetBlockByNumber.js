@@ -4,11 +4,8 @@ const GetBlockByNumber = gql`
     query GetBlock($number: BlockNumber!) {
         block(number: $number) {
             hash
-            transactionCount
-            transactions(filter: { withInput: true }) {
+            transactions {
                 hash
-                nonce
-                index
                 from {
                     address
                 }
@@ -16,13 +13,6 @@ const GetBlockByNumber = gql`
                     address
                 }
                 value
-                gasPrice
-                gas
-                inputData
-                status
-                block {
-                    hash
-                }
             }
         }
     }
